@@ -90,7 +90,6 @@ const Sidebar = () => {
                 />
                 <div className={styles.userDetail}>
                     <span className={styles.username}>Adrian Ramirez</span>
-                    <br />
                     <span className={styles.userTitle}>Coder</span>
                 </div>
             </div>
@@ -104,6 +103,10 @@ const Sidebar = () => {
                     </li>
                 ))}
             </ul>
+            <button className={styles.logout}>
+                <MdLogout />
+                Logout
+            </button>
         </div>
     );
 };

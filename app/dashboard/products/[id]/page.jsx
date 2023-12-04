@@ -11,19 +11,29 @@ const SingleProductPage = () => {
             </div>
             <div className={styles.formContainer}>
                 <form className={styles.form}>
-                    <label>Name</label>
-                    <input type="text" name="name" placeholder="Product Name" />
-                    <label>Description</label>
+                    <input type="hidden" name="id" />
+                    <label>Title</label>
                     <input
                         type="text"
-                        name="desc"
-                        placeholder="Product Description"
+                        name="title"
+                        placeholder="Product Title"
                     />
                     <label>Price</label>
-                    <input type="text" name="price" placeholder="Price: $..." />
+                    <input type="number" name="price" placeholder="Price" />
                     <label>Stock</label>
-                    <input type="text" name="stock" placeholder="Stock" />
-                    <button type="submit">Update</button>
+                    <input type="number" name="stock" placeholder="Stock" />
+                    <label>Color</label>
+                    <input type="text" name="color" placeholder="Color" />
+                    <label>Size</label>
+                    <textarea type="text" name="size" placeholder="Size" />
+                    <label>Cat</label>
+                    <select name="cat" id="cat">
+                        <option value="kitchen">Kitchen</option>
+                        <option value="computers">Computers</option>
+                    </select>
+                    <label>Description</label>
+                    <textarea name="desc" id="desc" rows="10"></textarea>
+                    <button>Update</button>
                 </form>
             </div>
         </div>

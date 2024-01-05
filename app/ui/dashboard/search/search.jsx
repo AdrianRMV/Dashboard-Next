@@ -14,6 +14,8 @@ const Search = ({ placeholder }) => {
     // ! useDebouncedCallback espera a que el usuario termine de escirbir con un tiempo de espera de 300 milisegundos en este caso, para impedir el exceso de peticiones
 
     const handleSearch = useDebouncedCallback(({ target }) => {
+        params.set('page', 1);
+
         // Si no tiene un valor el input no se manda una query por parametro y asi evitamos una peticion vacia
         if (target.value) {
             target.value.length > 2 && params.set('q', target.value);

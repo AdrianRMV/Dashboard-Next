@@ -5,7 +5,7 @@ export const fetchUsers = async (q, page) => {
     // Ragex for case sensitive
     const regex = new RegExp(q, 'i');
 
-    const ITEM_PER_PAGE = 2;
+    const ITEM_PER_PAGE = 3;
 
     try {
         connectToDB();

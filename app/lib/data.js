@@ -25,6 +25,18 @@ export const fetchUsers = async (q, page) => {
     }
 };
 
+export const fetchUser = async (id) => {
+    try {
+        connectToDB();
+
+        const user = await User.findById(id);
+        return user;
+    } catch (error) {
+        console.log(error);
+        throw new Error('Failed to fetch User!!');
+    }
+};
+
 export const fetchProducts = async (q, page) => {
     // Ragex for case sensitive
     const regex = new RegExp(q, 'i');
@@ -46,5 +58,17 @@ export const fetchProducts = async (q, page) => {
     } catch (error) {
         console.log(error);
         throw new Error('Failed to fetch Products!!');
+    }
+};
+
+export const fetchProduct = async (id) => {
+    try {
+        connectToDB();
+
+        const product = await Product.findById(id);
+        return product;
+    } catch (error) {
+        console.log(error);
+        throw new Error('Failed to fetch product!!');
     }
 };
